@@ -91,4 +91,8 @@ resource "aws_ecs_service" "app" {
   tags = merge(var.tags, {
     Name = "${var.project}-${var.environment}-service"
   })
+
+  lifecycle {
+    ignore_changes = [task_definition]
+  }
 }
