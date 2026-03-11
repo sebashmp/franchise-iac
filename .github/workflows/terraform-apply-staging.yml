@@ -12,7 +12,7 @@ jobs:
   apply:
     name: Apply to Staging
     runs-on: ubuntu-latest
-    environment: staging 
+    environment: stage
 
     steps:
       - name: Checkout
